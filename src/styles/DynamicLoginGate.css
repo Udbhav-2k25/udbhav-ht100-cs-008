@@ -1,0 +1,335 @@
+/* NeuroGate Authentication Component Styles */
+
+:root {
+  --ng-primary: #2563eb;
+  --ng-primary-hover: #1d4ed8;
+  --ng-secondary: #6b7280;
+  --ng-secondary-hover: #4b5563;
+  --ng-success: #10b981;
+  --ng-error: #ef4444;
+  --ng-warning: #f59e0b;
+  --ng-border: #e5e7eb;
+  --ng-bg-light: #f9fafb;
+  --ng-text-primary: #111827;
+  --ng-text-secondary: #6b7280;
+  --ng-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --ng-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.ng-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+.ng-card {
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: var(--ng-shadow-lg);
+  width: 100%;
+  max-width: 420px;
+  overflow: hidden;
+}
+
+.ng-form-container {
+  padding: 2rem;
+}
+
+.ng-title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--ng-text-primary);
+  line-height: 1.2;
+}
+
+.ng-subtitle {
+  margin: 0 0 1.5rem 0;
+  font-size: 0.875rem;
+  color: var(--ng-text-secondary);
+  line-height: 1.5;
+}
+
+/* Form Styles */
+.ng-form {
+  margin: 1.5rem 0;
+}
+
+.ng-form-group {
+  margin-bottom: 1.25rem;
+}
+
+.ng-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--ng-text-primary);
+}
+
+.ng-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid var(--ng-border);
+  border-radius: 0.5rem;
+  background-color: var(--ng-bg-light);
+  color: var(--ng-text-primary);
+  transition: all 0.2s ease;
+}
+
+.ng-input:focus {
+  outline: none;
+  border-color: var(--ng-primary);
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.ng-input:disabled {
+  background-color: #f3f4f6;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.ng-input-otp {
+  font-size: 1.25rem;
+  letter-spacing: 0.25rem;
+  text-transform: uppercase;
+  font-family: 'Courier New', monospace;
+  text-align: center;
+}
+
+/* Button Styles */
+.ng-button-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.ng-button {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.ng-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.ng-button-primary {
+  background-color: var(--ng-primary);
+  color: white;
+  width: 100%;
+}
+
+.ng-button-primary:hover:not(:disabled) {
+  background-color: var(--ng-primary-hover);
+  box-shadow: var(--ng-shadow-lg);
+}
+
+.ng-button-primary:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.ng-button-secondary {
+  background-color: var(--ng-bg-light);
+  color: var(--ng-text-primary);
+  border: 1px solid var(--ng-border);
+}
+
+.ng-button-secondary:hover:not(:disabled) {
+  background-color: var(--ng-border);
+}
+
+/* Error Message */
+.ng-error-message {
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  background-color: #fee2e2;
+  border-left: 4px solid var(--ng-error);
+  border-radius: 0.375rem;
+  color: #991b1b;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* Info Box */
+.ng-info-box {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: var(--ng-bg-light);
+  border-radius: 0.5rem;
+  border-left: 4px solid var(--ng-primary);
+}
+
+.ng-info-box h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--ng-text-primary);
+}
+
+.ng-info-box p {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: var(--ng-text-secondary);
+  line-height: 1.5;
+}
+
+/* Risk Indicator */
+.ng-risk-indicator {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: #fef3c7;
+  border-radius: 0.5rem;
+  border: 1px solid #fcd34d;
+}
+
+.ng-risk-badge {
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  background-color: var(--ng-warning);
+  color: white;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.ng-risk-details {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: #78350f;
+}
+
+.ng-risk-details p {
+  margin: 0.25rem 0;
+}
+
+/* Success Container */
+.ng-success-container {
+  text-align: center;
+  padding: 2.5rem 2rem;
+}
+
+.ng-success-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background-color: #d1fae5;
+  color: var(--ng-success);
+  font-size: 2.5rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  animation: slideDown 0.6s ease-out;
+}
+
+.ng-success-details {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background-color: var(--ng-bg-light);
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.ng-success-details p {
+  margin: 0.5rem 0;
+  color: var(--ng-text-secondary);
+}
+
+.ng-success-details strong {
+  color: var(--ng-success);
+  font-weight: 600;
+}
+
+/* Error Container */
+.ng-error-container {
+  text-align: center;
+  padding: 2.5rem 2rem;
+}
+
+.ng-error-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background-color: #fee2e2;
+  color: var(--ng-error);
+  font-size: 2.5rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  animation: shake 0.5s ease-in-out;
+}
+
+/* Animations */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .ng-container {
+    padding: 1rem;
+  }
+
+  .ng-card {
+    max-width: 100%;
+  }
+
+  .ng-form-container {
+    padding: 1.5rem;
+  }
+
+  .ng-button-group {
+    grid-template-columns: 1fr;
+  }
+
+  .ng-title {
+    font-size: 1.25rem;
+  }
+
+  .ng-subtitle {
+    font-size: 0.8125rem;
+  }
+}
